@@ -1,0 +1,143 @@
+:root {
+  --color-primary: #F53838;
+  --color-primary-shadow: #F5383859;
+  --color-secondary: #F53855;
+  --color-white: #fff;
+  --color-border:#DDDDDD;
+  --color-very-dark-blue: #0D1025;
+  --border: 2px;
+  --border-radius: 10px;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.896rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* End CSS Reset */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  gap: calc(var(--default-padding) * 4);
+  max-width: var(--desktop-width);
+}
+@media (max-width: 600px) {
+  .container {
+    gap: calc(var(--default-padding) * 2);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.4rem;
+  }
+}
+
+.logoContent__logo {
+  width: 14.9rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  font-weight: 400;
+}
+
+.sign {
+  display: flex;
+  gap: 3rem;
+  font-weight: 500;
+}
+.sign__in {
+  padding-top: 1.3rem;
+}
+.sign__up {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  padding: 1.3rem 4.5rem;
+  border: var(--border) solid var(--color-primary);
+  border-radius: calc(var(--border-radius) * 5);
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  padding: var(--default-padding) 0;
+  font-size: 1.4rem;
+}
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: calc(var(--default-padding) / 2);
+  }
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--color-very-dark-blue);
+  z-index: -1;
+}
+.footer__left {
+  margin-right: auto;
+}
+@media (max-width: 600px) {
+  .footer__left {
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
