@@ -115,6 +115,46 @@ a {
   }
 }
 
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__content {
+    max-width: 55.5rem;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: var(--line-height-head);
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__description {
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    line-height: var(--line-height-para);
+  }
+
+  &__button {
+    margin-top: 5rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.3rem 4.5rem;
+    border: var(--border) solid var(--color-primary);
+    border-radius: var(--border-radius);
+  }
+
+  &__image {
+    width: var(--img-1-width);
+    height: var(--img-1-height);
+  }
+}
+
 .footer {
   position: relative;
   display: flex;
