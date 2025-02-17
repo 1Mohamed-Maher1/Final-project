@@ -14,16 +14,17 @@
     <title>LaslesVPN</title>
   </head>
   <body>
-    <div class="container">
-
+    <div class="containers">
+<!-- HEADER -->
       <header class="header">
         <div class="logoContent">
           <img
             class="logoContent__logo"
-            src="./img/Icon/Logo.svg"
+            src="../img/Icon/Logo.svg"
             alt="LaslesVPN logo"
           />
         </div>
+      <!-- NAVIGATION -->
         <nav class="links">
           <li>
             <a class="links__link" href="#about">About</a>
@@ -41,12 +42,15 @@
             <a class="links__link" href="#help">Help</a>
           </li>
         </nav>
+        <!-- SIGN -->
         <div class="sign">
           <a class="sign__in" href="#">Sign in</a>
           <a class="sign__up" href="#">Sign Up</a>
         </div>
       </header>
-      <div id="about" class="section section__about">
+<!-- ABOUT -->
+    <div class="container">
+      <section id="about" class="section about">
         <div class="section__content">
           <h1 class="section__title">
             Want anything to be easy with
@@ -59,34 +63,40 @@
           <button class="section__button">Get Started</button>
         </div>
         <div class="section__image">
-          <img src="/img/Illustration/Illustration 1.svg" alt="lustrion 1" />
+          <img src="../img/Illustration/Illustration 1.svg" alt="lustrion 1" />
         </div>
-      </div>
-      <div class="section__rectangle">
+      </section>
+    </div>
+<!-- RECTANGLE -->
+    <div class="container">
+      <section class="section__rectangle">
           <div class="section__rectangle-content">
-            <img class="section__rectangle-icon" src="/img/Icon/user.svg" alt=""></img>
+            <img class="section__rectangle-icon" src="../img/Icon/user.svg" alt=""></img>
             <div>
               <p class="section__rectangle-num">90+</p>
               <p class="section__rectangle-paragraph">Users</p>
             </div>
           </div>
-
+            <span></span>
           <div class="section__rectangle-content">
-            <img class="section__rectangle-icon" src="/img/Icon/location.svg" alt="">
+            <img class="section__rectangle-icon" src="../img/Icon/location.svg" alt="">
             <div>
               <p class="section__rectangle-num">30+</p>
               <p class="section__rectangle-paragraph">Locations</p></img>
             </div>
           </div>
-
+            <span></span>
           <div class="section__rectangle-content">
-            <img class="section__rectangle-icon" src="/img/Icon/Server.svg" alt="">
+            <img class="section__rectangle-icon" src="../img/Icon/Server.svg" alt="">
             <div>  
               <p class="section__rectangle-num">50+</p>
               <p class="section__rectangle-paragraph">Servers</p></img>
             </div>
           </div>  
-      </div>
+      </section>
+    </div>
+<!-- FEATURES -->
+    <div class="container">
       <div id="features"  class="section section__features">
         <div class="section__content">
           <h2 class="section__title">
@@ -95,12 +105,19 @@
           <p class="section__description">
             You can explore the features that we provide with fun and have their own functions each feature.
           </p>
-          <button class="section__button">Get Started</button>
+          <ul class="section__list">
+            <li><img src="../img/Icon/Circle Vector.svg" alt="Vector">Powerfull online protection.</li>
+            <li><img src="../img/Icon/Circle Vector.svg" alt="Vector">Internet without borders.</li>
+            <li><img src="../img/Icon/Circle Vector.svg" alt="Vector">Supercharged VPN</li>
+            <li><img src="../img/Icon/Circle Vector.svg" alt="Vector">No specific time limits.</li>
+          </ul>
         </div>
         <div class="section__image">
-          <img src="/img/Illustration/Illustration 2.svg" alt="lustrion 1" />
+          <img src="../img/Illustration/Illustration 2.svg" alt="lustrion 1" />
         </div>
       </div>
+    </div>
+
     </div>
   </body>
 </html>
