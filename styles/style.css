@@ -6,6 +6,9 @@
   --color-secondary: #f53855;
   --color-white: #fff;
   --color-border: #dddddd;
+  --color-border-span: #eeeff2;
+  --color-price-span: #0b132a;
+  --color-paragraph: #4f5665;
   --color-very-dark-blue: #0d1025;
   --border: 2px;
   --border-radius: 10px;
@@ -82,6 +85,7 @@ button {
   border: none;
   cursor: pointer;
   border: 0;
+  font-family: Rubik;
 }
 
 ul,
@@ -97,7 +101,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Rubik", sans-serif;
+  font-family: Rubik;
   line-height: 1.896rem;
 }
 
@@ -123,12 +127,17 @@ a {
   }
 }
 
-#features,
+.paragraph {
+  color: var(--color-paragraph);
+}
+
+/* #features,
 #pricing,
 #testimonials,
 #help {
   padding: 10rem 0;
-}
+} */
+
 /* HEADER */
 .header {
   display: flex;
@@ -164,10 +173,19 @@ a {
 }
 .sign__up {
   background-color: var(--color-white);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   padding: 1.3rem 4.5rem;
-  border: var(--border) solid var(--color-primary);
+  border: var(--border) solid var(--color-secondary);
   border-radius: calc(var(--border-radius) * 5);
+
+  &:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+  }
+  &:active {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+  }
 }
 /* END HEADER */
 
@@ -198,6 +216,7 @@ a {
 
 .section__description {
   margin: 2rem 0;
+  font-weight: var(--font-weight-400);
   font-size: var(--font-size-16);
   line-height: var(--line-height-30);
 }
@@ -222,12 +241,28 @@ a {
 }
 
 .section__button {
-  margin-top: 5rem;
+  font-weight: 700;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-25);
+  margin-top: 3rem;
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 1.3rem 4.5rem;
+  padding: 1.75rem 7.75rem;
   border: var(--border) solid var(--color-primary);
   border-radius: var(--border-radius);
+  box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: none;
+  }
+
+  &:active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+  }
 }
 
 .section__image {
@@ -239,14 +274,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 7.25rem;
+  padding: 3.721rem 9.1rem;
   border: var(--border) solid var(--color-white);
   border-radius: var(--border-radius);
-  box-shadow: 0rem 2rem 7rem -7rem #0d1025;
+  box-shadow: 0rem 1rem 7.6rem -7rem var(--color-very-dark-blue);
 
   & span {
-    height: 7.848rem;
-    border: 2px solid #eeeff2;
+    height: 12.557rem;
+    border: calc(var(--border) - 1px) solid var(--color-border-span);
   }
 }
 
@@ -271,8 +306,9 @@ a {
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.5rem;
+  color: var(--color-paragraph);
 }
-/* FEATURES */
+/* SECTION FEATURES */
 .section__features {
   display: flex;
   flex-direction: row-reverse;
@@ -280,6 +316,11 @@ a {
   & h2 {
     font-size: var(--font-size-35);
     line-height: var(--line-height-50);
+  }
+
+  & .section__image {
+    width: var(--img-2-width);
+    height: var(--img-2-height);
   }
 }
 /* SECTION PRICING */
@@ -295,9 +336,11 @@ a {
   justify-content: center;
 }
 
-p.section__description {
-  font-size: var(--font-size-16);
+.section__description-pricing {
+  margin: 2rem 0;
+  text-align: center;
   font-weight: var(--font-weight-400);
+  font-size: var(--font-size-16);
   line-height: var(--line-height-30);
 }
 
@@ -315,12 +358,24 @@ p.section__description {
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  width: 30.3rem;
+  width: 33rem;
   height: 76rem;
-  padding: 4rem;
-  border: var(--border) solid var(--color-border);
+  /* padding: 4rem 4rem 5rem; */
+  border: 2px solid var(--color-border);
   border-radius: var(--border-radius);
   box-shadow: 0rem 2rem 7rem -7rem #0d1025;
+
+  &:nth-child(1) > .section__pricing-card-pricing {
+    margin: 13rem 0 5rem;
+  }
+
+  &:nth-child(2) > .section__pricing-card-pricing {
+    margin: 9rem 0 5rem;
+  }
+
+  &:nth-child(3) > .section__pricing-card-pricing {
+    margin: 5rem 0 5rem;
+  }
 
   &:hover {
     border: var(--border) solid var(--color-primary);
@@ -332,11 +387,21 @@ p.section__description {
     padding: 1.3rem 6.29rem;
     border: var(--border) solid var(--color-primary);
     border-radius: calc(var(--border-radius) * 5);
-    margin-bottom: 3.3rem;
+    /* margin-bottom: 3.3rem; */
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-700);
+    line-height: 18.96px;
 
     &:hover {
       background-color: var(--color-primary);
       color: var(--color-white);
+      box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+    }
+
+    &:active {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      box-shadow: none;
     }
   }
 }
@@ -344,21 +409,22 @@ p.section__description {
 .section__pricing-card-image {
   width: 14.49rem;
   height: 16.537rem;
-  margin-top: 8rem;
+  margin-top: 7.963rem;
 }
 
 .section__pricing-card-title {
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-18);
   line-height: var(--line-height-30);
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 .section__pricing-card-list {
   display: flex;
   flex-direction: column;
-  row-gap: 1.5rem;
-  font-size: var(--font-size-16);
+  row-gap: 1rem;
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-14);
   line-height: var(--line-height-30);
 
   & li {
@@ -367,17 +433,24 @@ p.section__description {
     gap: 2rem;
 
     & img {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 1.333rem;
+      height: 0.907rem;
     }
   }
+}
+
+.section__pricing-card-pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
 }
 
 .section__pricing-card-price {
   font-weight: var(--font-weight-500);
   font-size: var(--font-size-25);
   line-height: var(--line-height-30);
-  margin: 5rem 0 2rem;
+  text-align: center;
 
   & span {
     font-weight: var(--font-weight-400);
