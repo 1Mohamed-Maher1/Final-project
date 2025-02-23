@@ -6,6 +6,7 @@
   --color-secondary: #f53855;
   --color-white: #fff;
   --color-border: #dddddd;
+  --color-span: #dde0e4;
   --color-border-span: #eeeff2;
   --color-price-span: #0b132a;
   --color-paragraph: #4f5665;
@@ -177,6 +178,7 @@ a {
   padding: 1.3rem 4.5rem;
   border: var(--border) solid var(--color-secondary);
   border-radius: calc(var(--border-radius) * 5);
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: var(--color-secondary);
@@ -251,6 +253,7 @@ a {
   border: var(--border) solid var(--color-primary);
   border-radius: var(--border-radius);
   box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: var(--color-white);
@@ -363,6 +366,7 @@ a {
   /* padding: 4rem 4rem 5rem; */
   border: 2px solid var(--color-border);
   border-radius: var(--border-radius);
+  transition: all 0.3s ease;
   box-shadow: 0rem 2rem 7rem -7rem #0d1025;
 
   &:nth-child(1) > .section__pricing-card-pricing {
@@ -391,6 +395,7 @@ a {
     font-size: var(--font-size-16);
     font-weight: var(--font-weight-700);
     line-height: 18.96px;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: var(--color-primary);
@@ -518,6 +523,179 @@ a {
   margin: 15.581rem 0 3.581rem;
 }
 
+/* HELP */
+.help {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.help__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+
+  & h3 {
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-35);
+    line-height: var(--line-height-50);
+  }
+
+  & p {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-30);
+  }
+}
+
+.help__customers {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin: 6rem 0;
+}
+
+.help__customer {
+  width: 40rem;
+  height: 23rem;
+  padding: 3rem;
+  border: var(--border) solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0rem 2rem 7rem -7rem #0d1025;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border: var(--border) solid var(--color-primary);
+  }
+}
+
+.help__customer-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.help__customer-leftSide {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.help__customer-right {
+  margin-left: auto;
+
+  & span {
+    margin-right: 1rem;
+  }
+
+  & img {
+    width: 1.6rem;
+  }
+}
+
+.help__customer-image {
+  width: 5rem;
+  height: 5rem;
+}
+
+.help__customer-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.help__customer-name {
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-18);
+}
+
+.help__customer-country {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-14);
+}
+
+.help__customer-description {
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-30);
+}
+
+.help__slider {
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 6.5rem;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spans {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.span-1 {
+  background-color: var(--color-primary);
+  border-radius: calc(var(--border-radius) * 5);
+  width: 4.5rem;
+  height: 1.5rem;
+}
+
+.span {
+  background-color: var(--color-span);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.arrows {
+  display: flex;
+  gap: 2rem;
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+.arrow-1 {
+  border: var(--border) solid var(--color-primary);
+  border-radius: 100%;
+  padding: 1.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  rotate: 180deg;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+}
+
+.arrow {
+  border: var(--border) solid var(--color-primary);
+  border-radius: 100%;
+  padding: 1.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+}
 /* END SECTION */
 
 /* FOOTER */
