@@ -118,7 +118,7 @@ a {
   margin: 0 auto;
   padding: 0 var(--gutter);
   overflow: hidden;
-  gap: 9rem;
+  gap: 10rem;
 }
 
 @media (max-width: 600px) {
@@ -350,7 +350,7 @@ a {
   column-gap: 5rem;
   align-items: center;
   justify-content: space-around;
-  padding: 4rem;
+  margin: 4rem;
 }
 
 .section__pricing-card {
@@ -457,6 +457,65 @@ a {
     font-size: var(--font-size-25);
     line-height: var(--line-height-30);
   }
+}
+
+/* SECTION TESTIMONIALS */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* second solution */
+
+  /* & div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    & h3 {
+      font-weight: var(--font-weight-500);
+      font-size: var(--font-size-35);
+      line-height: var(--line-height-50);
+    }
+
+    & p {
+      font-weight: var(--font-weight-400);
+      font-size: var(--font-size-16);
+      line-height: var(--line-height-30);
+
+      & span {
+        font-weight: var(--font-weight-500);
+      }
+    }
+  } */
+}
+
+.testimonials__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+
+  & h3 {
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-35);
+    line-height: var(--line-height-50);
+  }
+
+  & p {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-30);
+
+    & span {
+      font-weight: var(--font-weight-500);
+    }
+  }
+}
+
+.testimonials__image {
+  margin: 15.581rem 0 3.581rem;
 }
 
 /* END SECTION */
