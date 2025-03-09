@@ -28,10 +28,13 @@
 }
 
 .social__link {
-    & img {
-        width: 3.36rem;
-        height: 3.36rem;
-    }
+
+    // background-color: var(--color-primary);
+    // border-radius: 50%;
+    // text-align: center;
+
+    width: 3.36rem;
+    // height: 3.36rem;
 }
 
 .footer__col {

@@ -730,9 +730,8 @@ img {
   margin: 1rem 0;
 }
 
-.social__link img {
+.social__link {
   width: 3.36rem;
-  height: 3.36rem;
 }
 
 .footer__col {
