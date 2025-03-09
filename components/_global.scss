@@ -1,0 +1,32 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body,
+[type="submit"] {
+  border: 0;
+  font-size: 1.6rem;
+  line-height: 1.896rem;
+  font-family: var(--font-family-Rubik);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10rem;
+  margin: 0 auto;
+  max-width: 144rem;
+  padding: var(--gutter) var(--gutter) 0;
+}
+
+.paragraph {
+  color: var(--color-paragraph);
+  line-height: var(--font-size-30);
+}

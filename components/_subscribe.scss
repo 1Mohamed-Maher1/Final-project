@@ -1,0 +1,51 @@
+.subscribe {
+    display: flex;
+    align-items: center;
+    padding: 5.85rem 7rem;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+    box-shadow: 0rem 2rem 8rem -7rem var(--color-very-dark-blue);
+}
+
+.subscribe__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subscribe__title {
+    font-weight: var(--font-weight-500);
+    font-size: var(--font-size-35);
+    line-height: var(--line-height-45);
+}
+
+.subscribe__description {
+    font-weight: var(--font-weight-400);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-30);
+}
+
+.subscribe__button {
+    font-weight: 700;
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-25);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1.75rem 6.5rem;
+    border: var(--border) solid var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        box-shadow: none;
+    }
+
+    &:active {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+    }
+}

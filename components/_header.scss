@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* @media (max-width: 600px) {
+    .header {
+      font-size: 1.4rem;
+    }
+  } */
+
+
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-weight: 400;
+    list-style: none;
+}
+
+/* SIGN */
+.sign {
+    display: flex;
+    gap: 3rem;
+    font-weight: 500;
+}
+
+.sign__in {
+    align-self: center;
+}
+
+.sign__up {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    padding: 1.3rem 4.5rem;
+    border: var(--border) solid var(--color-secondary);
+    border-radius: calc(var(--border-radius) * 5);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+    }
+
+    &:active {
+        background-color: var(--color-white);
+        color: var(--color-secondary);
+    }
+}

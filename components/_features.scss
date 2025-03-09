@@ -1,0 +1,14 @@
+.section__features {
+    display: flex;
+    flex-direction: row-reverse;
+
+    & h2 {
+        font-size: var(--font-size-35);
+        line-height: var(--line-height-50);
+    }
+
+    & .section__image {
+        width: var(--img-2-width);
+        height: var(--img-2-height);
+    }
+}
