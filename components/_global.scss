@@ -34,3 +34,22 @@ img {
 .none {
   display: none;
 }
+
+.arrowhead {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(245, 56, 56, 0.6);
+
+  &:hover {
+    scale: 1.1;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    background: rgba(245, 56, 56, 0.8);
+  }
+}

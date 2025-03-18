@@ -136,6 +136,24 @@ img {
   display: none;
 }
 
+.arrowhead {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: rgba(245, 56, 56, 0.6);
+}
+.arrowhead:hover {
+  scale: 1.1;
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  background: rgba(245, 56, 56, 0.8);
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -918,6 +936,9 @@ img {
     align-self: end;
     margin-top: 2rem;
     margin-right: 2rem;
+  }
+  .arrowhead {
+    left: 2rem;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
