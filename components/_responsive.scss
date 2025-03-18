@@ -1,72 +1,260 @@
-@media (max-width: 1340px) {
-    html {
-        font-size: 8px;
-    }
-
+//==================== Desktop ====================
+@media (max-width:1340px) {
     .container {
         row-gap: calc(var(--gutter) * 2);
     }
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 6px;
-    }
-
-
-}
-
-@media (max-width:425px) {
+//==================== Tablet ====================
+@media (max-width:768px) {
 
     html {
-        font-size: 5px;
+        font-size: 6.5px;
     }
 
-    .section__title {
-        font-size: 20px;
+    .containers {
+        row-gap: 8rem;
     }
 
-    .section__rectangle-content {
-        flex-wrap: wrap;
+    .about {
+        gap: 6rem;
+    }
+
+    .section {
+        &__features {
+            gap: 6rem;
+        }
+
+        &__rectangle-content {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1rem;
+
+        }
+
+        &__rectangle-num {
+            text-align: center;
+        }
+
+
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .links,
+    .sign {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
+        width: 30px;
+        height: 17px;
+        cursor: pointer;
 
-    }
+        &__bar {
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-secondary);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
 
-    .section__rectangle-num {
-        text-align: center;
-    }
-
-    .section__button {
-        border: calc(var(--border) - 1px) solid var(--color-primary);
-    }
-
-    .section__features {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .section__pricing-cards {
-        // 1 --> 
-        flex-wrap: wrap;
-        gap: 2rem;
-
-        // 2 --> 
-        // flex-direction: column;
-
-        // 3 --> 
-        // display: grid;
-        // grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section__pricing-card {
-        & button {
-            border: calc(var(--border) - 1px) solid var(--color-primary);
+        &__checkbox {
+            display: none;
         }
     }
 
-    .subscribe__button {
-        border: calc(var(--border) - 1px) solid var(--color-primary);
+    .burger-menu {
+        gap: 0.80rem;
+        z-index: 0;
+        align-self: center;
+        cursor: pointer;
+    }
+
+    .burger-menu__bar {
+        height: 0.6rem;
+        width: 4.5rem;
+        transition: var(--transition-timing);
+    }
+
+    .burger-menu__checkbox:checked+.navigation {
+        top: 100%;
+    }
+
+    .section__pricing-cards {
+        flex-wrap: wrap;
+        gap: 2rem;
+
+    }
+
+    .navigation-burger {
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        transform: translateX(-89%);
+        backdrop-filter: blur(3.8px);
+        border-radius: 16px 0 0 16px;
+        background: rgba(245, 56, 56, 0.8);
+        border: 1px solid rgba(245, 56, 56, 1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .sign {
+        display: none;
+
+        &__in {
+            color: var(--color-white);
+            padding: 1.3rem 4.5rem;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &__up {
+            background-color: var(--color-white);
+            color: var(--color-secondary);
+            padding: 1.5rem 4.5rem;
+            border: 1px solid var(--color-white);
+
+            &:hover {
+                background-color: transparent;
+                color: var(--color-white);
+                box-shadow: 0rem 2.5rem 2.5rem -1rem var(--color-primary-shadow);
+            }
+        }
+    }
+
+    .sign-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 3rem;
+        margin-top: 60rem;
+    }
+
+    .navigation-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        padding: 8rem;
+    }
+
+    .links__link {
+        font-size: 3rem;
+        color: var(--color-white);
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    #close {
+        width: 35px;
+        align-self: end;
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+//==================== Mobile ====================
+@media (min-width:320px) and (max-width:767px) {
+    html {
+        font-size: 5.5px;
+    }
+
+    .containers {
+        row-gap: 6rem;
+    }
+
+    .navigation-burger {
+        width: 58%;
+        transform: translateX(-83%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sign-1 {
+        font-size: 3rem;
+        margin-top: 50rem;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .section {
+
+        &__content {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 22.5px;
+        }
+
+        &__rectangle-content {
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__rectangle-num {
+            text-align: center;
+        }
+
+        &__button {
+            border: calc(var(--border) - 1px) solid var(--color-primary);
+            box-shadow: 0rem 0.5rem 2.5rem -1rem var(--color-primary);
+            margin: 0;
+        }
+
+        &__features {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__pricing-card {
+            &:hover {
+                border: calc(var(--border) - 1px) solid var(--color-primary);
+
+            }
+
+            & button {
+                border: calc(var(--border) - 1px) solid var(--color-primary);
+            }
+        }
+
+        &__subscribe__button {
+            border: calc(var(--border) - 1px) solid var(--color-primary);
+        }
+
+        &__list {
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 8rem;
+            grid-row-gap: 0.5rem;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+    }
+
+    .paragraph {
+        font-size: 9px;
     }
 
     .help__customers {
