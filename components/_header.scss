@@ -11,9 +11,14 @@
     font-weight: 400;
     list-style: none;
 
+
     &__link {
+        transition: all 0.3s ease;
+
         &:hover {
             color: var(--color-secondary);
+            transition: all 0.3s ease;
+
         }
     }
 }
@@ -27,8 +32,12 @@
 
 .sign__in {
     align-self: center;
+    transition: all 0.3s ease;
+
     &:hover {
         color: var(--color-secondary);
+        transition: all 0.3s ease;
+
     }
 }
 
@@ -43,6 +52,8 @@
     &:hover {
         background-color: var(--color-secondary);
         color: var(--color-white);
+        transition: all .5s ease;
+
     }
 
     &:active {

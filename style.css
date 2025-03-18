@@ -149,8 +149,12 @@ img {
   font-weight: 400;
   list-style: none;
 }
+.links__link {
+  transition: all 0.3s ease;
+}
 .links__link:hover {
   color: var(--color-secondary);
+  transition: all 0.3s ease;
 }
 
 /* SIGN */
@@ -162,9 +166,11 @@ img {
 
 .sign__in {
   align-self: center;
+  transition: all 0.3s ease;
 }
 .sign__in:hover {
   color: var(--color-secondary);
+  transition: all 0.3s ease;
 }
 
 .sign__up {
@@ -178,6 +184,7 @@ img {
 .sign__up:hover {
   background-color: var(--color-secondary);
   color: var(--color-white);
+  transition: all 0.5s ease;
 }
 .sign__up:active {
   background-color: var(--color-white);
@@ -743,6 +750,10 @@ img {
 .social__link {
   width: 3.5rem;
 }
+.social__link:hover {
+  scale: 1.1;
+  transition: all 0.3s ease;
+}
 
 .footer__col {
   display: flex;
@@ -900,6 +911,7 @@ img {
   }
   .links__link:hover {
     scale: 1.1;
+    color: var(--color-white);
   }
   #close {
     width: 35px;
